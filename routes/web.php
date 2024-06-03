@@ -24,8 +24,6 @@ Route::get('/home', function (){
     return view('home');
 })->name('home');
 
-    // Route::get('/home', [ProfileController::class, 'index'])->name('home');
-
     Route::get('/profile/create',[ProfileController::class, 'create'])->name('profile.create');
     Route::post('/profile', [ProfileController::class,'store'])->name('profile.store');
     Route::get('/profile/view', [ProfileController::class, 'view'])->name('profile.view');
@@ -41,12 +39,3 @@ Route::middleware(['auth'])->group(function ()
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
-// Route::middleware(['auth'])->group(function () {
-//     Route::get('/dashboard' , [DashboardController::class, 'index'])->name('dashboard');
-// });
-
-// Route::middleware(['auth'])->group(function () {
-//     Route::get('dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
