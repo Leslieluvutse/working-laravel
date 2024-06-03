@@ -29,7 +29,7 @@
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700">{{ __('Name') }}</label>
                     <input id="name" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
-                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-5 px-20 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm @error('name') border-red-500 @enderror">
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-5 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm @error('name') border-red-500 @enderror">
                     
                     @error('name')
                         <span class="text-sm text-red-500">{{ $message }}</span>

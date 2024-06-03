@@ -5,7 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
-// use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get('/', function () {
@@ -24,8 +24,19 @@ Route::get('/home', function (){
     return view('home');
 })->name('home');
 
+    // Route::get('/home', [ProfileController::class, 'index'])->name('home');
 
-Route::middleware(['auth'])->group(function () {
+    Route::get('/profile/create',[ProfileController::class, 'create'])->name('profile.create');
+    Route::post('/profile', [ProfileController::class,'store'])->name('profile.store');
+    Route::get('/profile/view', [ProfileController::class, 'view'])->name('profile.view');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile/', [ProfileController::class,'destoy'])->name('profile.destroy');
+
+
+
+Route::middleware(['auth'])->group(function () 
+{
     Route::resource('users', UserController::class);
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });

@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $this -> validator($request->all())->validate();
         $user = $this->create($request->all());
 
-        return redirect()->route('dashboard')->with('status', 'Registration successfully');
+        return redirect()->route('home')->with('status', 'Registration successfully');
     }
     protected function validator(array $data)
     {

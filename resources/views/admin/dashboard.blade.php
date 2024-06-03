@@ -10,7 +10,6 @@
     <div class="min-h-screen flex justify-between">
         <!-- Sidebar -->
         @include('layouts.sidebar')
-        
         <!-- Main content -->
         <div class="flex-1 p-6">
             <h1 class="text-3xl font-bold">Welcome to the Dashboard</h1>
