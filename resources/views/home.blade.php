@@ -7,9 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body class="bg-gray-100">
-    <div class="min-h-screen ">
-        <!-- Sidebar -->
-        @include('layouts.userdash')
+    @extends('layouts.userdash')
+    @section('content')
+            <div class="min-h-screen ">
         <!-- Main Content -->
         <div class="w-3/4 p-6 mx-auto mt-10">
             <h1 class="text-3xl font-semibold mb-4">User Dashboard</h1>
@@ -24,6 +24,8 @@
             <p>No profile yet. <a href="{{ route('profile.create') }}" class="text-blue-600 hover:text-blue-800">Create Profile</a></p>
         </div>
     </div>
+
+    @endsection
 
     @if (session('status'))
         <script>

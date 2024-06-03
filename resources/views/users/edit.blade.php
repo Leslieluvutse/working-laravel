@@ -7,9 +7,10 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
-    <div class="min-h-screen flex">
-        <!-- Sidebar -->
-        @include('layouts.sidebar')
+@extends('layouts.sidebar')
+
+@section('content')
+    <div class="min-h-screen">
         <!-- Main content -->
         <div class="flex-1 p-6">
             <h1 class="text-3xl font-bold mb-6">Edit User</h1>
@@ -30,5 +31,6 @@
             </form>
         </div>
     </div>
+@endsection
 </body>
 </html>

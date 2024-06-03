@@ -50,8 +50,10 @@
     </style>
 </head>
 <body class="bg-gray-100">
+@extends('layouts.userdash')
+
+@section('content')
     <div class="min-h-screen">
-        @include('layouts.userdash')
         <div class="max-w-3xl mx-auto py-10 px-6 mt-10 profile-card">
             <div class="profile-header">
                 <h1 class="text-3xl font-semibold mb-2">Profile</h1>
@@ -72,5 +74,6 @@
             </div>
         </div>
     </div>
+@endsection
 
    

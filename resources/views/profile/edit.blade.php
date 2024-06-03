@@ -9,8 +9,11 @@
 
 </head>
 <body class="bg-gray-100  ">
-    <div class="min-h-screen">
-        @include('layouts.userdash')
+    @extends('layouts.userdash')
+   
+    @section('content')
+     <div class="min-h-screen">
+        {{-- @include('layouts.userdash') --}}
     <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 bg-white mt-20">
         <h2 class="text-2xl font-bold mb-6 text-center">{{ __('Edit Profile') }}</h2>
 
@@ -90,6 +93,7 @@
         </form>
     </div>
     </div>
+    @endsection
 
     @if (session('status'))
         <script>

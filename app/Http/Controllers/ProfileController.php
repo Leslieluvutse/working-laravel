@@ -48,7 +48,7 @@ class ProfileController extends Controller
 
         $profile->save();
 
-        return redirect()->route('home')->with('status', 'Profile created successfully');
+        return redirect()->route('profile.view')->with('status', 'Profile created successfully');
     }
 
     public function view()
@@ -89,7 +89,7 @@ class ProfileController extends Controller
 
         $profile->save();
 
-        return redirect()->route('home')->with('status', 'Profile updated successfully');
+        return redirect()->route('profile.view')->with('status', 'Profile updated successfully');
     }
 
     public function destroy($id)

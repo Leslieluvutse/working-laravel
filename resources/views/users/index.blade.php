@@ -7,11 +7,12 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
-    <div class="min-h-screen flex">
-        <!-- Sidebar -->
-        @include('layouts.sidebar')
+ @extends('layouts.sidebar')
+
+ @section('content')
+    <div class="">
         <!-- Main content -->
-        <div class="flex-1 p-6">
+        <div class="p-6">
             <h1 class="text-3xl font-bold mb-6">Manage Users</h1>
             <table class="min-w-full bg-white text-center text-2xl">
                 <thead>
@@ -40,5 +41,6 @@
             </table>
         </div>
     </div>
+ @endsection
 </body>
 </html>

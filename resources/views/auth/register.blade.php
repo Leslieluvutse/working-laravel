@@ -7,10 +7,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gray-100 flex">
-    @include('layouts.sidebar')
-    <div class="min-h-screen flex items-center justify-center align-middle">
-        <div class="max-w-lg ml-96 bg-white p-32 rounded shadow-md">
+<body class="bg-gray-100">
+    @extends('layouts.sidebar')
+
+    @section('content')
+         <div class="min-h-screen">
+        <div class="max-w-6xl mx-auto bg-white p-32 rounded shadow-md">
             <h2 class="text-2xl font-bold mb-6 text-center">{{ __('Register User') }}</h2>
 
             @if ($errors->any())
@@ -70,5 +72,6 @@
             </form>
         </div>
     </div>
+    @endsection
 </body>
 </html>

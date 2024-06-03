@@ -7,13 +7,16 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
-    <div class="min-h-screen flex justify-between">
+    @extends('layouts.sidebar')
+
+    @section('content')
+        <div class=" justify-between">
         <!-- Sidebar -->
-        @include('layouts.sidebar')
         <!-- Main content -->
         <div class="flex-1 p-6">
             <h1 class="text-3xl font-bold">Welcome to the Dashboard</h1>
         </div>
     </div>
+    @endsection
 </body>
 </html>
