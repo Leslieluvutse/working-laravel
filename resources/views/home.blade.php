@@ -15,7 +15,7 @@
             <h1 class="text-3xl font-semibold mb-4">User Dashboard</h1>
             <p class="text-lg mb-4">Welcome, {{ Auth::user()->name }}</p>
             
-            {{-- @if (Auth::user()->profile_image)
+            <!-- {{-- @if (Auth::user()->profile_image) -->
                 <img src="{{ asset('storage/' . Auth::user()->profile_image) }}" alt="{{ Auth::user()->name }}" class="w-32 h-32 rounded-full object-cover mb-4">
             @else
                 <p>No profile image available.</p>

@@ -11,7 +11,7 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
-
+Route::get('/home',[\App\Http\Controllers\HomeController::class,'index']);
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
